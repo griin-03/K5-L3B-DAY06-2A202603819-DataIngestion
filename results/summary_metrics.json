@@ -1,0 +1,119 @@
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "dimensions": 384,
+  "vector_store": "ChromaDB (cosine metric, persistent)",
+  "corpus_pages": 35,
+  "total_chars": 176326,
+  "strategy_info": {
+    "A": {
+      "chunk_count": 408,
+      "avg_chunk_size": 477.6200980392157,
+      "min_chunk_size": 59,
+      "max_chunk_size": 500,
+      "ingest_time_sec": 26.74
+    },
+    "B": {
+      "chunk_count": 234,
+      "avg_chunk_size": 752.6794871794872,
+      "min_chunk_size": 2,
+      "max_chunk_size": 4033,
+      "ingest_time_sec": 256.79
+    },
+    "C": {
+      "chunk_count": 234,
+      "avg_chunk_size": 752.6794871794872,
+      "min_chunk_size": 2,
+      "max_chunk_size": 4033,
+      "ingest_time_sec": 491.37
+    }
+  },
+  "metrics": {
+    "A": {
+      "overall": {
+        "count": 20,
+        "hit1_num": 12,
+        "hit1_den": 20,
+        "hit1_str": "12/20 (60.0%)",
+        "hit3_num": 13,
+        "hit3_den": 20,
+        "hit3_str": "13/20 (65.0%)"
+      },
+      "dev": {
+        "count": 15,
+        "hit1_num": 8,
+        "hit1_den": 15,
+        "hit1_str": "8/15 (53.3%)",
+        "hit3_num": 9,
+        "hit3_den": 15,
+        "hit3_str": "9/15 (60.0%)"
+      },
+      "test": {
+        "count": 5,
+        "hit1_num": 4,
+        "hit1_den": 5,
+        "hit1_str": "4/5 (80.0%)",
+        "hit3_num": 4,
+        "hit3_den": 5,
+        "hit3_str": "4/5 (80.0%)"
+      }
+    },
+    "B": {
+      "overall": {
+        "count": 20,
+        "hit1_num": 8,
+        "hit1_den": 20,
+        "hit1_str": "8/20 (40.0%)",
+        "hit3_num": 12,
+        "hit3_den": 20,
+        "hit3_str": "12/20 (60.0%)"
+      },
+      "dev": {
+        "count": 15,
+        "hit1_num": 7,
+        "hit1_den": 15,
+        "hit1_str": "7/15 (46.7%)",
+        "hit3_num": 10,
+        "hit3_den": 15,
+        "hit3_str": "10/15 (66.7%)"
+      },
+      "test": {
+        "count": 5,
+        "hit1_num": 1,
+        "hit1_den": 5,
+        "hit1_str": "1/5 (20.0%)",
+        "hit3_num": 2,
+        "hit3_den": 5,
+        "hit3_str": "2/5 (40.0%)"
+      }
+    },
+    "C": {
+      "overall": {
+        "count": 20,
+        "hit1_num": 9,
+        "hit1_den": 20,
+        "hit1_str": "9/20 (45.0%)",
+        "hit3_num": 11,
+        "hit3_den": 20,
+        "hit3_str": "11/20 (55.0%)"
+      },
+      "dev": {
+        "count": 15,
+        "hit1_num": 8,
+        "hit1_den": 15,
+        "hit1_str": "8/15 (53.3%)",
+        "hit3_num": 10,
+        "hit3_den": 15,
+        "hit3_str": "10/15 (66.7%)"
+      },
+      "test": {
+        "count": 5,
+        "hit1_num": 1,
+        "hit1_den": 5,
+        "hit1_str": "1/5 (20.0%)",
+        "hit3_num": 1,
+        "hit3_den": 5,
+        "hit3_str": "1/5 (20.0%)"
+      }
+    }
+  }
+}

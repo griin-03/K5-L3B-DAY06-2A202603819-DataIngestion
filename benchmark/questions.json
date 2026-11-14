@@ -1,0 +1,208 @@
+[
+  {
+    "id": "Q01",
+    "split": "dev",
+    "question": "What is tokenization and what are its common token units in LLM training?",
+    "expected_answer": "Tokenization is an essential pre-processing step that parses text into non-decomposing units called tokens, which can be characters, subwords, symbols, or words.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 4,
+    "evidence_quote": "Tokenization [59] is an essential pre-processing step in LLM training that parses the text into non-decomposing units called tokens. Tokens can be characters, subwords [60], symbols [61], or words",
+    "filter": null
+  },
+  {
+    "id": "Q02",
+    "split": "dev",
+    "question": "How does the Alibi positional embedding scheme work?",
+    "expected_answer": "Alibi subtracts a scalar bias from the attention score that increases with the distance between token positions, favoring recent tokens.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 4,
+    "evidence_quote": "Alibi [65]: It subtracts a scalar bias from the attention score that increases with the distance between token positions. This favors using recent tokens for attention.",
+    "filter": null
+  },
+  {
+    "id": "Q03",
+    "split": "dev",
+    "question": "How does Rotary Position Embedding (RoPE) encode relative position?",
+    "expected_answer": "RoPE rotates query and key representations at an angle proportional to the token absolute position in the input sequence.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 4,
+    "evidence_quote": "RoPE [66]: It rotates query and key representations at an angle proportional to the token absolute position in the input sequence, resulting in a relative positional encoding scheme",
+    "filter": null
+  },
+  {
+    "id": "Q04",
+    "split": "dev",
+    "question": "What is the primary capability provided by the Transformers library in LLM workflows?",
+    "expected_answer": "It provides access to various pre-trained transformer models with APIs to train, fine-tune, infer, and develop custom models.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 5,
+    "evidence_quote": "Transformers [82]: The library provides access to various pretrained transformer models with APIs to train, fine-tune, infer, and develop custom models.",
+    "filter": {
+      "section": "2. Background"
+    }
+  },
+  {
+    "id": "Q05",
+    "split": "dev",
+    "question": "What is the core functionality of Microsoft's DeepSpeed library?",
+    "expected_answer": "DeepSpeed is a library for scalable distributed training and inference of deep learning models.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 5,
+    "evidence_quote": "DeepSpeed [36]: A library for scalable distributed training and inference of deep learning models.",
+    "filter": {
+      "section": "2. Background"
+    }
+  },
+  {
+    "id": "Q06",
+    "split": "dev",
+    "question": "What role does Megatron-LM serve in large language model development?",
+    "expected_answer": "Megatron-LM provides GPU-optimized techniques for large-scale training of LLMs.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 5,
+    "evidence_quote": "Megatron-LM [80]: It provides GPU-optimized techniques for large-scale training of LLMs.",
+    "filter": null
+  },
+  {
+    "id": "Q07",
+    "split": "dev",
+    "question": "What distinguishes the JAX library in the context of machine learning and numerical computing?",
+    "expected_answer": "JAX is a Python library for high-performance numerical computing and scalable machine learning that can differentiate native Python and NumPy functions and run them on GPUs.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 5,
+    "evidence_quote": "JAX [83]: A Python library for high-performance numerical computing and scaleable machine learning. It can differentiate native Python and NumPy functions and execute them on GPUs.",
+    "filter": null
+  },
+  {
+    "id": "Q08",
+    "split": "dev",
+    "question": "What is the process of instruction-tuning for LLMs?",
+    "expected_answer": "Instruction-tuning fine-tunes a pre-trained model on instruction formatted data (instruction and input-output pairs) to effectively respond to user queries.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 7,
+    "evidence_quote": "Instruction-tuning: To enable a model to respond to user queries effectively, the pre-trained model is fine-tuned on instruction formatted data i.e., instruction and an input-output pair.",
+    "filter": null
+  },
+  {
+    "id": "Q09",
+    "split": "dev",
+    "question": "What is the architecture and pre-training objective of UL2?",
+    "expected_answer": "UL2 is an encoder-decoder architecture trained using a mixture of denoisers (MoD) objective including R-Denoiser, S-Denoiser, and X-Denoiser.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 10,
+    "evidence_quote": "UL2 [125]: An encoder-decoder architecture trained using a mixture of denoisers (MoD) objective. Denoisers include 1) R-Denoiser: a regular span masking, 2) S-Denoiser: which corrupts consecutive tokens of a large sequence and 3) X-Denoiser: which corrupts a large number of tokens randomly.",
+    "filter": null
+  },
+  {
+    "id": "Q10",
+    "split": "dev",
+    "question": "What architecture does CodeGen share with PaLM?",
+    "expected_answer": "CodeGen has a similar architecture to PaLM featuring parallel attention, MLP layers, and RoPE embeddings.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 11,
+    "evidence_quote": "CodeGen [140]: CodeGen has a similar architecture to PaLM [15], i.e., parallel attention, MLP layers, and RoPE embeddings.",
+    "filter": null
+  },
+  {
+    "id": "Q11",
+    "split": "dev",
+    "question": "What benefit does aligning an LLM with supported evidence provide?",
+    "expected_answer": "It allows the model to generate responses with proofs and facts, reduces hallucination, and increases human trust in the model output.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 17,
+    "evidence_quote": "Aligning with Supported Evidence: This style of alignment allows the model to generate responses with proofs and facts, reduces hallucination, and assists humans more effectively, which increases trust in the model\u2019s output.",
+    "filter": null
+  },
+  {
+    "id": "Q12",
+    "split": "dev",
+    "question": "How does PEQA adapt pre-trained models efficiently?",
+    "expected_answer": "PEQA reduces the precision of fully-connected layers and fine-tunes only the quantization scaling parameters.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 22,
+    "evidence_quote": "PEQA) [264] reduces the precision of fully-connected layers and fine-tunes only quantization scaling parameters.",
+    "filter": null
+  },
+  {
+    "id": "Q13",
+    "split": "dev",
+    "question": "How does QLoRA achieve 4-bit fine-tuning of LLMs?",
+    "expected_answer": "QLoRA fine-tunes 4-bit quantized pre-trained LLMs with LoRA using a 4-bit normal float data type.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 22,
+    "evidence_quote": "QLoRA [261] fine-tunes 4-bit quantized pre-trained LLM with LoRA [250] using a 4-bit normal float, which shows better performance over a 4-bit integer and float.",
+    "filter": null
+  },
+  {
+    "id": "Q14",
+    "split": "dev",
+    "question": "What is pruning as an alternative approach to model quantization?",
+    "expected_answer": "Pruning removes redundant or non-critical connections or weights to compress model size and reduce deployment costs.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 22,
+    "evidence_quote": "Pruning is an alternative approach to quantization to compress model size, thereby reducing LLMs deployment costs",
+    "filter": null
+  },
+  {
+    "id": "Q15",
+    "split": "dev",
+    "question": "What techniques are suggested to mitigate training instability and divergence in large models?",
+    "expected_answer": "Techniques include restarting training from an earlier checkpoint, skipping 200-500 earlier data batches at divergence, and re-shuffling batches.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 24,
+    "evidence_quote": "To mitigate this problem, many approaches suggest restarting training from an earlier checkpoint [15, 33, 91], skipping 200-500 earlier data batches at the point of divergence in [15] and re-shuffling batches in [91].",
+    "filter": null
+  },
+  {
+    "id": "Q16",
+    "split": "test",
+    "question": "What is the PAWS dataset designed to evaluate in multilingual NLP?",
+    "expected_answer": "PAWS is designed to evaluate the performance of cross-lingual paraphrase identification models across examples in seven languages.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 32,
+    "evidence_quote": "PAWS [430] dataset for paraphrase identification. It includes examples in seven languages and is designed to evaluate the performance of cross-lingual paraphrase identification models.",
+    "filter": {
+      "section": "5. Datasets and Evaluation"
+    }
+  },
+  {
+    "id": "Q17",
+    "split": "test",
+    "question": "What specific capability does the Truthful-QA benchmark measure?",
+    "expected_answer": "It measures a language model's truthfulness when generating answers to questions.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 32,
+    "evidence_quote": "Truthful-QA [405]: A unique benchmark that measures a language model\u2019s truthfulness when generating answers. The dataset includes questions",
+    "filter": null
+  },
+  {
+    "id": "Q18",
+    "split": "test",
+    "question": "Why is research focusing on making LLMs more explainable?",
+    "expected_answer": "To promote user trust and ensure responsible AI usage, especially in sensitive domains.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 35,
+    "evidence_quote": "Efforts are being made to make LLMs more explainable to promote user trust and to ensure responsible AI usage.",
+    "filter": null
+  },
+  {
+    "id": "Q19",
+    "split": "test",
+    "question": "Which tokenization schemes are commonly used in modern large language models?",
+    "expected_answer": "Commonly used tokenization schemes include wordpiece, byte pair encoding (BPE), and unigramLM.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 4,
+    "evidence_quote": "Some of the commonly used tokenization schemes in LLMs include wordpiece [62], byte pair encoding (BPE) [61], and unigramLM [60].",
+    "filter": null
+  },
+  {
+    "id": "Q20",
+    "split": "test",
+    "question": "How does LLM-QAT train quantized student models?",
+    "expected_answer": "LLM-QAT generates training data from the pre-trained network and trains a quantized student model using knowledge distillation.",
+    "gold_source_id": "llm_survey_2024",
+    "gold_page": 22,
+    "evidence_quote": "LLMQAT [262] generates training data from the pre-trained network and trains a quantized student model with knowledge distillation.",
+    "filter": null
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "source_id": "llm_survey_2024",
+  "title": "A Comprehensive Overview of Large Language Models",
+  "source_path_or_url": "https://arxiv.org/abs/2307.06435",
+  "pdf_url": "https://arxiv.org/pdf/2307.06435.pdf",
+  "license_or_permission": "arXiv non-exclusive license / Open Access Research Survey",
+  "accessed_at": "2026-11-14T09:54:00+07:00",
+  "total_pages_in_pdf": 47,
+  "pages_used": "1 to 35 (35 substantive content pages)",
+  "page_count_rule": "Pages 1 to 35 contain primary survey content, tables, technical figures, and discussions (Sections 1 through 8). Pages 36-47 containing only bibliographic references are excluded from the substantive content corpus count. Every page from 1 to 35 has substantive text (minimum 1,125 characters, average >4,500 characters per page).",
+  "character_count_normalized": 179420,
+  "metadata_fields": [
+    {
+      "name": "document_id",
+      "type": "string",
+      "description": "Identifier of the source publication"
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "description": "Origin document filename or title"
+    },
+    {
+      "name": "page",
+      "type": "integer",
+      "description": "Exact physical page number (1-based) in PDF"
+    },
+    {
+      "name": "section",
+      "type": "string",
+      "description": "Top-level section heading (e.g. 2. Background, 3. Large Language Models, etc.) used for scoped metadata filtering"
+    }
+  ]
+}

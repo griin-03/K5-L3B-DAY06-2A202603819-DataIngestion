@@ -1,5 +1,6 @@
-"""Choose a real embedding provider (API or local) and implement this contract."""
+"""Embedding provider using fastembed with BAAI/bge-small-en-v1.5."""
 from typing import Protocol
+from fastembed import TextEmbedding
 
 
 class Embedder(Protocol):
@@ -7,23 +8,29 @@ class Embedder(Protocol):
     dimensions: int
 
     def embed_documents(self, texts: list[str]) -> list[list[float]]:
-        """Return one vector per input text, in the same order."""
         ...
 
     def embed_query(self, question: str) -> list[float]:
-        """Return a query vector compatible with the stored document vectors."""
         ...
 
 
-class MyEmbedder:
-    """TODO: implement a provider adapter; do not silently fall back to mock vectors."""
+class FastEmbedder:
+    """Real semantic embedder using BAAI/bge-small-en-v1.5 (384 dimensions)."""
 
-    def __init__(self, model_name: str) -> None:
+    def __init__(self, model_name: str = "BAAI/bge-small-en-v1.5") -> None:
         self.model_name = model_name
-        raise NotImplementedError("TODO: initialize real embedder and dimensions")
+        self._model = TextEmbedding(model_name=model_name)
+        self.dimensions = 384
 
     def embed_documents(self, texts: list[str]) -> list[list[float]]:
-        raise NotImplementedError("TODO: embed_documents")
+        """Return dense embeddings for a list of document chunks."""
+        if not texts:
+            return []
+        embeddings = list(self._model.embed(texts))
+        return [emb.tolist() if hasattr(emb, "tolist") else list(emb) for emb in embeddings]
 
     def embed_query(self, question: str) -> list[float]:
-        raise NotImplementedError("TODO: embed_query")
+        """Return dense embedding for a query question."""
+        embeddings = list(self._model.embed([question]))
+        emb = embeddings[0]
+        return emb.tolist() if hasattr(emb, "tolist") else list(emb)

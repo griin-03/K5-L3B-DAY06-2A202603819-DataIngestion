@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed,500,50,"doc_id,source,page,section",none,BAAI/bge-small-en-v1.5 (384d),Fixed window retrieves dense local keywords well but cuts across sentence and concept boundaries,8/15 (53.3%),9/15 (60.0%),4/5 (80.0%),4/5 (80.0%),"408 chunks, ingest time 26.74s, cost $0.00"
+B,paragraph,800,0,"doc_id,source,page,section",none,BAAI/bge-small-en-v1.5 (384d),Paragraph boundaries preserve complete thoughts and semantic coherence though longer text dilutes dense keyword matching,7/15 (46.7%),10/15 (66.7%),1/5 (20.0%),2/5 (40.0%),"234 chunks, ingest time 256.79s, cost $0.00"
+C,paragraph,800,0,"doc_id,source,page,section",section_filter,BAAI/bge-small-en-v1.5 (384d),Metadata filtering restricts search space to correct sections improving precision on scoped queries,8/15 (53.3%),10/15 (66.7%),1/5 (20.0%),1/5 (20.0%),"234 chunks, ingest time 491.37s, identical chunks to B"
